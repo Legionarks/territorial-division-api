@@ -94,7 +94,7 @@ export class StrategyBuilder<T> {
   }
 
   async build() {
-    const data = await this.queryBuilder.limit(100).getMany();
+    const data = await this.queryBuilder.limit(100000).getMany();
 
     return Utilities.handleResponse<T>(data);
   }
